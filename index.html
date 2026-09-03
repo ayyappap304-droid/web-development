@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopSmart Storefront</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="navbar">
+        <h1 class="logo">ShopSmart</h1>
+        <div class="cart-status">Cart: <span id="cart-count">0</span> items</div>
+    </header>
+
+    <main class="container">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">💻</div>
+                <h3>Developer Laptop</h3>
+                <p class="price">₹75,000</p>
+                <button class="btn" onclick="updateCart()">Add to Cart</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">🖱️</div>
+                <h3>Wireless Mouse</h3>
+                <p class="price">₹1,500</p>
+                <button class="btn" onclick="updateCart()">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let items = 0;
+        function updateCart() {
+            items++;
+            document.getElementById('cart-count').innerText = items;
+        }
+    </script>
+</body>
+</html>
